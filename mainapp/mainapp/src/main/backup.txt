@@ -1,0 +1,9 @@
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+postgres scope = provided
+The issue you're facing likely arises because of the provided scope for the PostgreSQL dependency in your pom.xml. The provided scope means that the dependency is expected to be present in the runtime environment but is not included in your application's packaged artifact. This can cause issues when running the application locally, as Hibernate won't be able to connect to PostgreSQL.
+
+1:04 cha pudhe maghe aahe exceptions
+
+last stop - 1,52,24
+
+confusion in @Id import
